@@ -23,7 +23,7 @@ Open Meteo Weather API – https://api.open-meteo.com
 
 # Live Demo
 
-https://gagan191104.github.io/your-repository-name/
+https://gagan191104.github.io/Assessment-4-Interactive-Data-Dashboard/
 
 # Author
 
