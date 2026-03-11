@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Data Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <span class="logo-icon">&#9881;</span>
+          <span class="logo-text">DataDash</span>
+        </div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#user-section">User Generator</a></li>
+            <li><a href="#weather-section">Weather</a></li>
+            <li><a href="#todo-section">To-Do</a></li>
+            <li><a href="#search-section">Products</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#user-section">User Generator</a></li>
+        <li><a href="#weather-section">Weather</a></li>
+        <li><a href="#todo-section">To-Do</a></li>
+        <li><a href="#search-section">Products</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Interactive Data Dashboard</h1>
+        <p>
+          Explore APIs, manage tasks, check weather, and browse products — all
+          in one place.
+        </p>
+        <a href="#user-section" class="hero-btn">Get Started</a>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-card">
+          <span class="hero-card-icon">&#128100;</span>
+          <h3>User Generator</h3>
+          <p>Generate random user profiles from API</p>
+        </div>
+        <div class="hero-card">
+          <span class="hero-card-icon">&#9925;</span>
+          <h3>Weather Search</h3>
+          <p>Get live weather for any city</p>
+        </div>
+        <div class="hero-card">
+          <span class="hero-card-icon">&#9998;</span>
+          <h3>To-Do List</h3>
+          <p>Manage your daily tasks easily</p>
+        </div>
+        <div class="hero-card">
+          <span class="hero-card-icon">&#128722;</span>
+          <h3>Product Search</h3>
+          <p>Browse and filter products instantly</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Section 1: Random User Generator -->
+      <section class="section" id="user-section">
+        <div class="section-header">
+          <h2>1. Random User Generator</h2>
+          <p class="section-desc">
+            Click the button to generate a random user profile from the API.
+          </p>
+        </div>
+        <button id="generate-user-btn" class="btn">Generate User</button>
+        <div id="user-loading" class="spinner" style="display: none"></div>
+        <div id="user-container"></div>
+      </section>
+
+      <!-- Section 2: Weather Search -->
+      <section class="section" id="weather-section">
+        <div class="section-header">
+          <h2>2. Weather Search</h2>
+          <p class="section-desc">
+            Enter a city name to get current weather information.
+          </p>
+        </div>
+        <div class="input-group">
+          <input type="text" id="city-input" placeholder="Enter city name..." />
+          <button id="search-weather-btn" class="btn">Search Weather</button>
+        </div>
+        <div id="weather-loading" class="spinner" style="display: none"></div>
+        <div id="weather-container"></div>
+      </section>
+
+      <!-- Section 3: Dynamic To-Do List -->
+      <section class="section" id="todo-section">
+        <div class="section-header">
+          <h2>3. Dynamic To-Do List</h2>
+          <p class="section-desc">
+            Add, complete, and delete your daily tasks.
+          </p>
+        </div>
+        <div class="input-group">
+          <input type="text" id="todo-input" placeholder="Enter a task..." />
+          <button id="add-todo-btn" class="btn">Add Task</button>
+        </div>
+        <ul id="todo-list"></ul>
+      </section>
+
+      <!-- Section 4: Live Search Filter -->
+      <section class="section" id="search-section">
+        <div class="section-header">
+          <h2>4. Live Search Filter</h2>
+          <p class="section-desc">Search and browse products in real time.</p>
+        </div>
+        <input
+          type="text"
+          id="product-search"
+          placeholder="Search products..."
+        />
+        <div id="product-list"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="logo-icon">&#9881;</span>
+            <span>DataDash</span>
+          </div>
+          <p>
+            A dynamic web application showcasing API integration, DOM
+            manipulation, and interactive UI components.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#user-section">User Generator</a></li>
+            <li><a href="#weather-section">Weather Search</a></li>
+            <li><a href="#todo-section">To-Do List</a></li>
+            <li><a href="#search-section">Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Technologies Used</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (ES6)</li>
+            <li>REST APIs</li>
+            <li>LocalStorage</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>APIs Used</h4>
+          <ul>
+            <li>
+              <a href="https://randomuser.me/" target="_blank"
+                >RandomUser API</a
+              >
+            </li>
+            <li>
+              <a href="https://open-meteo.com/" target="_blank"
+                >Open-Meteo API</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DataDash Interactive Dashboard. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
